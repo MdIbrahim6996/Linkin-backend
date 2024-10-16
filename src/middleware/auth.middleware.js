@@ -4,7 +4,7 @@ import User from "../models/user.model.js";
 export const protectRoute = async (req, res, next) => {
   try {
     const token = req.cookies["jwt-linkedin"];
-    console.log("token", token);
+    console.log("token", req.cookies);
 
     if (!token) {
       return res
