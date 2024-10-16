@@ -27,9 +27,9 @@ if (process.env.NODE_ENV !== "production") {
   );
 }
 
-if (process.env.NODE_ENV === "production") {
-  app.use(cors());
-}
+// if (process.env.NODE_ENV === "production") {
+//   app.use(cors());
+// }
 //   cors({
 //     origin: process.env.CLIENT_URL,
 //     credentials: true,
