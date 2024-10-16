@@ -28,14 +28,13 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 if (process.env.NODE_ENV === "production") {
-  app.use(
-    cors({
-      // origin: `${process.env.CLIENT_URL}/*`,
-      origin: "*",
-      credentials: true,
-    })
-  );
+  app.use(cors());
 }
+//   cors({
+//     origin: process.env.CLIENT_URL,
+//     credentials: true,
+//   })
+// );
 
 app.use(express.json({ limit: "5mb" })); // parse JSON request bodies
 app.use(cookieParser());
